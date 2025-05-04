@@ -5,7 +5,7 @@ import time
 model = YOLO("best_model.pt")
 results = model.predict(source=0, show=True, save=True, stream=True)
 
-arduino = serial.Serial('COM7', 9600, timeout=1)  # Windows
+arduino = serial.Serial('COM4', 9600, timeout=1)  # Windows
 time.sleep(2)  
 print("Connected to Arduino!")
 arduino.write(b'1')
